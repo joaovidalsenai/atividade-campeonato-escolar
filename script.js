@@ -1,8 +1,8 @@
 function validarInscricao(event) {
     event.preventDefault();
-    let nomeAluno = document.getElementById("input-nome").value.split(" ")[0];
-    ///document.getElementById("cadastro-finalizado").innerHTML = `Inscrição realizada com sucesso! Boa sorte no campeonato ${nomeAluno}!`;
-    alert(`Inscrição realizada com sucesso! Boa sorte no campeonato ${nomeAluno}!`)
+    let nomeAluno = document.getElementById("input-nome").value.trim().split(" ")[0];
+    document.getElementById("alerta-texto").innerHTML = `Inscrição realizada com sucesso! Boa sorte no campeonato ${nomeAluno}!`;
+    document.getElementById("alerta-cadastro").style.display = 'flex';
 }
 
 function mudarSecao(secao) {
@@ -42,7 +42,7 @@ function atualizarContador() {
         const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-        document.getElementById("contador").innerText = `Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos para o campeonato começar!`;
+        document.getElementById("contador").innerText = `O campeonato começa em ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
 }
 
 atualizarContador();
