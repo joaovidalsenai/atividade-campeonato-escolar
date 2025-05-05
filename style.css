@@ -21,9 +21,32 @@ main {
 }
 
 #card-info {
+    display: block;
+}
+
+#form-inscricao {
+    display: none;
+    width: 90vw;
+    height: 60vh;
+    max-width: 600px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#cadastro-finalizado {
     display: none;
 }
 
-#card-info {
-    display: none;
+#nome-escola {
+    color: #b16df0;
+}
+
+.butao {
+    border-color: #762bbb;
+    background-color: #762bbb;
+}
+
+.butao:hover {
+    border-color: white;
+    background-color: #762bbb;
 }

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Campeonato Escolar 2025</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Centro Educacional Raiam Santos</a>
+          <a class="navbar-brand" href="#" onclick="mudarSecao(1)" id="nome-escola">Centro Educacional Raiam Santos</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -21,25 +21,28 @@
                 <a class="nav-link active" aria-current="page" href="#"  onclick="mudarSecao(1)">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sobre o campeonato</a>
+                <a class="nav-link" href="#" onclick="mudarSecao(1)">Sobre o campeonato</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" onclick="mudarSecao(3)">Inscreva-se</a>
               </li>
             </ul>
           </div>
+          <div class="d-flex" id="contador">
+          </div>
         </div>
     </nav>
     <main>
       <div class="card main" style="width: 90vw; max-width: 1200px;" id="card-info">
-        <img src="imagens\brazil-vs-costa-rica-highlights-futsal-world-cuo.webp" class="card-img-top" alt="...">
+        <img src="imagens\brazil-vs-costa-rica-highlights-futsal-world-cuo.webp" class="card-img-top">
         <div class="card-body centered">
           <h5 class="card-title">23° Campeonato Poliesportivo CERS</h5>
-          <p class="card-text">Estamos felizes em anunciar o 23⁠º campeonato poliesportivo do Centro Educacional Raiam Santos. Todos os alunos do ensino médio estão convidados a participar nos campeonatos de Futsal, Vôlei e Basquete. Todos os integrantes de uma dada equipe devem estar cursando o mesmo ano. Os jogos seguirão os regulamentos do Comitê Olímpico Internacional (COI). Os jogos ocorreram entre Maio e Outubro.</p>
-          <a href="#" class="btn btn-primary">Inscreva-se</a>
+          <p class="card-text">Estamos felizes em anunciar o 23⁠º campeonato poliesportivo do Centro Educacional Raiam Santos. Todos os alunos do ensino médio estão convidados a participar nos campeonatos de Futsal, Vôlei e Basquete. Todos os integrantes de uma dada equipe devem estar cursando o mesmo ano. Os jogos seguirão os regulamentos do Comitê Olímpico Internacional (COI). Os jogos começarão em 15 de Maio.</p>
+          <a href="#" class="butao btn btn-primary" onclick="mudarSecao(3)">Inscreva-se</a>
         </div>
       </div>
       <form onsubmit="validarInscricao(event)" id="form-inscricao" class="main">
+        <div id="cadastro-finalizado" onclick="cadastroFinalizado()"></div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nome completo</label>
           <input type="text" class="form-control" id="input-nome" aria-describedby="nomeHelp" required>
@@ -65,12 +68,11 @@
           </select>
         </div>
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <input type="checkbox" class="form-check-input" id="aceito-termos" required>
           <label class="form-check-label" for="exampleCheck1">Aceito os termos</label>
         </div>
-        <button type="submit" class="btn btn-primary">Finalizar inscrição</button>
+        <button type="submit" class="btn btn-primary butao">Finalizar inscrição</button>
       </form>
-
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="script.js"></script>
