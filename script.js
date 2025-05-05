@@ -1,5 +1,3 @@
-let currentImage = 0;
-
 function validarInscricao(event) {
     event.preventDefault();
     let nomeAluno = document.getElementById("input-nome").value.split(" ")[0];
@@ -15,12 +13,14 @@ function mudarSecao(secao) {
 
     switch (secao) {
         case 1:
-            document.getElementById("card-info").style.display = 'block'
+            document.getElementById("card-info").style.display = 'block';
+            break;
+        case 2:
+            document.getElementById("sobre-camp").style.display = 'block';
             break;
         case 3:
             document.getElementById("form-inscricao").style.display = 'flex'
             break;
-    
         default:
             document.getElementById("card-info").style.display = 'block'
             break;
@@ -47,3 +47,17 @@ function atualizarContador() {
 
 atualizarContador();
 setInterval(atualizarContador, 1000);
+
+let currentImage = 0;
+
+function mudarImagem() {
+    let imgs = document.getElementsByClassName("img-carousel");
+    for (let img of imgs) {
+        img.style.display = 'none';
+    }
+    imgs[currentImage].style.display = 'block';
+    currentImage++;
+    if (currentImage >= imgs.length) currentImage = 0;
+}
+mudarImagem(); 
+setInterval(mudarImagem, 5000);

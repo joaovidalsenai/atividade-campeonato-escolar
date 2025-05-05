@@ -33,6 +33,10 @@ main {
     justify-content: space-evenly;
 }
 
+#sobre-camp {
+    display: none;
+}
+
 #cadastro-finalizado {
     display: none;
 }
