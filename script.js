@@ -1,3 +1,5 @@
+let currentImage = 0;
+
 function validarInscricao(event) {
     event.preventDefault();
     let nomeAluno = document.getElementById("input-nome").value.split(" ")[0];
@@ -27,7 +29,7 @@ function mudarSecao(secao) {
 
 const dataCampeonato = new Date(2025, 4, 15, 15, 30, 0);
     
-    function atualizarContador() {
+function atualizarContador() {
         const agora = new Date();
         const diferenca = dataCampeonato - agora;
 
@@ -41,7 +43,7 @@ const dataCampeonato = new Date(2025, 4, 15, 15, 30, 0);
         const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
         document.getElementById("contador").innerText = `Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos para o campeonato começar!`;
-    }
+}
 
 atualizarContador();
 setInterval(atualizarContador, 1000);

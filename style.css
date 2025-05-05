@@ -50,3 +50,7 @@ main {
     border-color: white;
     background-color: #762bbb;
 }
+
+.img-carrousel {
+    display: none;
+}
