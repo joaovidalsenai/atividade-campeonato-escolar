@@ -47,3 +47,15 @@ function atualizarContador() {
 
 atualizarContador();
 setInterval(atualizarContador, 1000);
+
+function mudarImagem() {
+    let imgs = document.getElementsByClassName("img-carrousel");
+    for (let img of imgs) {
+        img.style.display = 'none';
+    }
+    imgs[currentImage].style.display = 'block';
+    currentImage++;
+    if (currentImage == 3) currentImage = 0;
+}
+mudarImagem(); 
+setInterval(mudarImagem, 1000);
